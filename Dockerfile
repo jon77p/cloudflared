@@ -1,5 +1,6 @@
 FROM bash:latest as build
-RUN wget https://github.com/cloudflare/cloudflared/releases/download/2021.8.0/cloudflared-linux-arm
+ENV RELEASE 2021.9.2
+RUN wget https://github.com/cloudflare/cloudflared/releases/download/$RELEASE/cloudflared-linux-arm
 RUN chmod +x cloudflared-linux-arm
 
 FROM gcr.io/distroless/base-debian10:nonroot
