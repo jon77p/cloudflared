@@ -1,7 +1,7 @@
 name: multi-arch image build
 on:
   push:
-    branches: master
+    branches: main
 
 jobs:
   build:
